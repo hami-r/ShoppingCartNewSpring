@@ -15,4 +15,19 @@ public class ShoppingCartController {
     public String addPage(){
         return "add page";
     }
+
+    @GetMapping(path = "/view", consumes = "application/json", produces = "application/json")
+    public String viewPage(){
+        return "view page";
+    }
+
+    @PostMapping(path = "/search", consumes = "application/json", produces = "application/json")
+    public String searchPage(){
+        return "search page";
+    }
+
+    @PostMapping(path = "/search", consumes = "application/json", produces = "application/json")
+    public String loginPage(){
+        return "login page";
+    }
 }
