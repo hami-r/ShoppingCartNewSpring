@@ -52,4 +52,10 @@ public class ShoppingCartController {
         map.put("status", "success");
         return map;
     }
+
+    @CrossOrigin(origins = "*")
+    @PostMapping(path = "/verify", consumes = "application/json", produces = "application/json")
+    public List<Login> loginVerify(@RequestBody Login l){
+        return (List<Login>) loginDao.verify(l.getEmail(),l.getPassword()) ;
+    }
 }
