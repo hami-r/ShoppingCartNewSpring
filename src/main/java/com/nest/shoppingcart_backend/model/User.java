@@ -7,7 +7,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "login")
-public class Login {
+public class User {
 
     @Id
     @GeneratedValue
@@ -18,10 +18,10 @@ public class Login {
     private String email;
     private String password;
 
-    public Login() {
+    public User() {
     }
 
-    public Login(int id, String name, String address, String phoneNo, String email, String password) {
+    public User(int id, String name, String address, String phoneNo, String email, String password) {
         this.id = id;
         this.name = name;
         this.address = address;
